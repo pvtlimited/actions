@@ -24,10 +24,8 @@ jobs:
     steps:
       - name: Comment with API
         run: |
-          gh api -X POST \
-          http://github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER} \
-          -f  body='
-            This comment is sent by API call.'
+          gh api -X POST "/repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
+          -f body='This comment is sent by API call.'
         env:
           GITHUB_TOKEN: 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
           ORGANIZATION: ${{ github.event.organization.login }}
