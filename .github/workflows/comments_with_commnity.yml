@@ -29,7 +29,7 @@ jobs:
           -f  body='
             This comment is sent by API call.'
         env:
-          GITHUB_TOKEN: ${{ secter.GITHUB_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_PASSWORD }}
           ORGANIZATION: ${{ github.event.organization.login }}
           REPOSITORY: ${{ github.events.repository.name }}
           ISSUE_NUMBER: ${{ github.events.issue.number }}
