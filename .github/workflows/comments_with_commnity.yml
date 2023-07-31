@@ -25,7 +25,15 @@ jobs:
       - name: Comment with API
         run: |
           gh api -X POST "/repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
-          -f body='Thanks for contacting we will respond you within short period of time'
+          -f body="""💥🔥 Thanks a bunch for reaching out! 🔥💥
+          👋 Our team is totally rockin' and rollin' with tons of awesome tasks right now, and we're stoked that you hit us up. We can't wait to hook you up with some epic vibes real soon! 😎
+          🌟 While we're firing up our response, stay cool and keep those positive vibes flowin'! Your patience is much appreciated. 🌟
+          🚀 In the meantime, if there's anything else on your mind or you just wanna chat, shoot us another message! We love hearing from kickass individuals like you! 💪💬
+          💯 You've got our word, your message matters big time, and we're gonna give you the top-notch attention you deserve! 💯
+          👉 So hang tight, stay awesome, and we'll be back at ya in a jiffy with some seriously rad answers! 👈
+          🤘🌈 Keep rockin' and rollin', and catch you on the flip side! 🌈🤘
+          🔥🎸 All the best and loads of attitude, 🎸🔥
+          🔥 [Your Team Name/Company Name] 🔥"""
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: ${{ github.event.organization.login }}
