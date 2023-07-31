@@ -25,7 +25,7 @@ jobs:
       - name: Comment with API
         run: |
           gh api -X POST "/repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
-          -f body='This comment is sent by API call.'
+          -f body='Thanks for contacting we will respond you within short period of time'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: ${{ github.event.organization.login }}
