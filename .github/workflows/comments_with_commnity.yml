@@ -25,7 +25,7 @@ jobs:
       - name: Comment with API
         run: |
           gh api -X POST \
-          http://github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+          http://github.com/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER} \
           -f  body='
             This comment is sent by API call.'
         env:
